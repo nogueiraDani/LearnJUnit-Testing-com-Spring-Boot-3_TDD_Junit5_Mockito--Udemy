@@ -1,4 +1,4 @@
-package com.dani.math;
+package com.dani.JUnit_first_steps;
 
 public class Calculator {
 
