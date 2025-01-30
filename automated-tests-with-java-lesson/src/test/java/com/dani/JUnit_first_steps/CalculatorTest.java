@@ -11,8 +11,6 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.dani.JUnit_first_steps.Calculator;
-
 @DisplayName("Tests for Calculator class")
 public class CalculatorTest {
 
