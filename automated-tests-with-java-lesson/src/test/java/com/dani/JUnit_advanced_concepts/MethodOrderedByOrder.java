@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
+@Order(3)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // roda o teste sempre pela ordem do Order
 public class MethodOrderedByOrder {
 

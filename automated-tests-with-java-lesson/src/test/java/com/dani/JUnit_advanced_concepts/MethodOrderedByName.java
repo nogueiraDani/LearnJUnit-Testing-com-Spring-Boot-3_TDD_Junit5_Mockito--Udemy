@@ -1,9 +1,11 @@
 package com.dani.JUnit_advanced_concepts;
 
 import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
+@Order(2)
 @TestMethodOrder(MethodOrderer.MethodName.class) // roda o teste sempre pela ordem do nome do método
 public class MethodOrderedByName {
 
