@@ -15,14 +15,14 @@ public class CourseBusiness {
         this.courseService = courseService;
     }
 
-    public List<String> retrieveCoursesRelatedToWinter(String user) {
+    public List<String> retrieveCoursesRelatedToSpring(String user) {
         List<String> filteredCourses = new ArrayList<String>();
 
         // simulando a regra de negocio do José
         if (user.equals("José")) {
             return filteredCourses;
         }
-        
+
         List<String> allCourses = courseService.retrieveCourses(user);
         for (String course : allCourses) {
             if (course.contains("Spring")) {
@@ -30,6 +30,17 @@ public class CourseBusiness {
             }
         }
         return filteredCourses;
+    }
+    
+    public void deleteCoursesNotRelatedToSpring(String user) {
+        
+        List<String> allCourses = courseService.retrieveCourses(user);
+        
+        for (String course : allCourses) {
+            if (!course.contains("Spring")) {
+                courseService.deleteCourse(course);
+            }
+        }
     }
 
 }

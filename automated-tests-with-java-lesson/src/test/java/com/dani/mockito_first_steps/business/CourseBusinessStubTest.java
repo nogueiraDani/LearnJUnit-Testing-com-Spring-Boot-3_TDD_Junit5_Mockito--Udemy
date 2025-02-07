@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import com.dani.mockito_first_steps.service.CourseService;
 import com.dani.mockito_first_steps.service.stubs.CourseServiceStub;
 
-public class CourseBusinessTest {
+public class CourseBusinessStubTest {
 
     @Test
     void testCoursesRelatedToSpring_When_UsingAStub() {
@@ -18,14 +18,14 @@ public class CourseBusinessTest {
         CourseBusiness business = new CourseBusiness(stubService);
 
         // When | Act
-        List<String> filteredCourses = business.retrieveCoursesRelatedToWinter("Dani");
+        List<String> filteredCourses = business.retrieveCoursesRelatedToSpring("Dani");
 
         // Then | Assert
         assertEquals(6, filteredCourses.size(), 
                 () -> "Expected 6 courses related to Spring");
 
         // simulando uma regra de negócio que diz q o user José retorno 0 cursos
-        filteredCourses = business.retrieveCoursesRelatedToWinter("José");
+        filteredCourses = business.retrieveCoursesRelatedToSpring("José");
         assertEquals(0, filteredCourses.size(),
                 () -> "Expected 0 courses related to Spring for user José");
     }

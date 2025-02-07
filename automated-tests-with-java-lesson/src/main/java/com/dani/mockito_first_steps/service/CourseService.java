@@ -6,4 +6,6 @@ public interface CourseService {
 
     public List<String> retrieveCourses(String user);
 
+    public void deleteCourse(String course);
+
 }

@@ -23,4 +23,10 @@ public class CourseServiceStub implements CourseService {
                 "Java 8");
     }
 
+    @Override
+    public void deleteCourse(String course) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteCourse'");
+    }
+
 }
