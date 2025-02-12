@@ -23,7 +23,7 @@ public class HamcrestMatchersTest {
         assertThat(list, everyItem(lessThan(16)));
 
         // Check Strings
-        assertThat(" ", is(emptyString()));
+        assertThat("", is(emptyString()));
         assertThat(null, is(emptyOrNullString()));
 
         // Arrays

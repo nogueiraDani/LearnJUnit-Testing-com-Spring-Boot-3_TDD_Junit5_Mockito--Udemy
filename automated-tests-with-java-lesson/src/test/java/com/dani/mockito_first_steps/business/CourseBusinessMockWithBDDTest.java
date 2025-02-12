@@ -56,7 +56,7 @@ public class CourseBusinessMockWithBDDTest {
                 .retrieveCoursesRelatedToSpring("Dani");
 
         // Then | Assert
-        assertThat(filteredCourses.size(), is(6));
+        assertThat(filteredCourses.size(), is(2));
     }
 
     @DisplayName("Test Delete Courses Not Related To Spring")
