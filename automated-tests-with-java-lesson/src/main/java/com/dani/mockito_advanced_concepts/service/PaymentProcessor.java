@@ -2,6 +2,11 @@ package com.dani.mockito_advanced_concepts.service;
 
 import java.math.BigDecimal;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class PaymentProcessor {
 
     private boolean allowForeignCurrencies;

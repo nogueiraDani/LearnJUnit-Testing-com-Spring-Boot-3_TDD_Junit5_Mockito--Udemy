@@ -42,6 +42,7 @@ public class SpyTest {
     void testSpyConcepts2() {
         // Given | Arrange
 
+        @SuppressWarnings("unchecked")
         List<String> spyArrayList = spy(ArrayList.class);
 
         // When | Act & Then | Assert
@@ -60,6 +61,7 @@ public class SpyTest {
     void testSpyConcepts3() {
         // Given | Arrange
 
+        @SuppressWarnings("unchecked")
         List<String> spyArrayList = spy(ArrayList.class);
 
         // When | Act & Then | Assert
@@ -77,6 +79,7 @@ public class SpyTest {
     void testSpyConcepts4() {
         // Given | Arrange
 
+        @SuppressWarnings("unchecked")
         List<String> spyArrayList = spy(ArrayList.class);
 
         // When | Act & Then | Assert
