@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-App<rest_with_spring_boot_and_java>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.dani.rest_with_spring_boot_and_java.App",
+            "projectName": "rest_with_spring_boot_and_java",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
