@@ -2,7 +2,7 @@ package com.dani.rest_with_spring_boot_and_java.service.converters;
 
 import org.springframework.stereotype.Service;
 
-import com.dani.rest_with_spring_boot_and_java.exceptions.UnsupportedMathOperationException;
+import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
 import com.dani.rest_with_spring_boot_and_java.service.validations.NumberValidation;
 
 @Service
@@ -20,7 +20,7 @@ public class NumberConverter {
             throw new IllegalArgumentException("Valor inválido: " + strNumber);
         }
         if (!numberValidation.isNumeric(strNumber)) {
-            throw new UnsupportedMathOperationException("Valor inválido: " + strNumber);
+            throw new ResourceNotFoundException("Valor inválido: " + strNumber);
         }
 
         // corrigindo valores com , para valor com .
