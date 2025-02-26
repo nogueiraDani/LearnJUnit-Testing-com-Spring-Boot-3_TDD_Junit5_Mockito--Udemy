@@ -1,6 +1,7 @@
 package com.dani.rest_with_spring_boot_and_java.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,15 @@ public class PersonService {
     public List<Person> findAll() {
 
         return personRepository.findAll();
+    }
+
+    public Optional<Person> findByName(String firstName) {
+
+        logger.info(String.format(
+                "Searching for person with name %s",
+                firstName));
+
+        return personRepository.findByFirstName(firstName);
     }
 
     public Person createPerson(Person person) {

@@ -31,6 +31,19 @@ public class Person implements Serializable {
     public Person() {
     }
 
+    public Person(Long id, String firstName, String lastName, String address) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+    }
+
+    public Person(String firstName, String lastName, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+    }
+
     public static long getSerialversionuid() {
         return serialVersionUID;
     }
