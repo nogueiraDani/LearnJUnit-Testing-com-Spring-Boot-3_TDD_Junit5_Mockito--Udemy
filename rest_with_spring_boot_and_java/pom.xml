@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -7,7 +8,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>com.dani</groupId>
@@ -15,9 +16,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rest_with_spring_boot_and_java</name>
 	<description>Project for reviewing Java Spring Boot content</description>
-	
+
 	<properties>
 		<java.version>21</java.version>
+		<spring.boot.starter.test.version>3.4.3</spring.boot.starter.test.version>
+		<postegresqlversion>42.7.5</postegresqlversion>
+		<dotenvjava.version>3.0.0</dotenvjava.version>
+		<h2database.version>2.3.232</h2database.version>
 	</properties>
 
 	<dependencies>
@@ -45,6 +50,15 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring.boot.starter.test.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -54,13 +68,21 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.7.5</version>
+			<version>${postgresql.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.cdimascio</groupId>
 			<artifactId>dotenv-java</artifactId>
-			<version>3.0.0</version>
+			<version>${dotenvjava.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2database.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 
@@ -94,7 +116,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 
