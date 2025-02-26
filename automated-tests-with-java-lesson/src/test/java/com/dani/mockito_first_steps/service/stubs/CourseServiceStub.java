@@ -25,7 +25,6 @@ public class CourseServiceStub implements CourseService {
 
     @Override
     public void deleteCourse(String course) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'deleteCourse'");
     }
 
