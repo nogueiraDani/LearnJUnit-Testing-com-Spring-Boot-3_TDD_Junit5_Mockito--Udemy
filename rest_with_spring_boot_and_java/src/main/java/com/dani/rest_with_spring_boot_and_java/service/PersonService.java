@@ -1,55 +1,34 @@
 package com.dani.rest_with_spring_boot_and_java.service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Logger;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dani.rest_with_spring_boot_and_java.entity.Person;
+import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
+import com.dani.rest_with_spring_boot_and_java.repositories.PersonRepository;
 
 @Service
 public class PersonService {
 
-    private AtomicLong counter = new AtomicLong();
-
     private Logger logger = Logger.getLogger(PersonService.class.getName());
 
-    public Person findById(String id) {
+    @Autowired
+    private PersonRepository personRepository;
+
+    public Person findById(Long id) {
 
         logger.info(String.format("Searching for person with id %s", id));
 
-        // mock simulando um retorno do banco de dados
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Daniela");
-        person.setLastName("Rampim");
-        person.setAddress("Santa Catarina - Brasil");
-
-        return person;
+        return personRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Person not found"));
     }
 
     public List<Person> findAll() {
-        List<Person> persons = new ArrayList<Person>();
 
-        for (int i = 0; i < 8; i++) {
-            Person person = mockPerson(i);
-            persons.add(person);
-        }
-
-        return persons;
-    }
-
-    private Person mockPerson(int i) {
-
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("First Name " + i);
-        person.setLastName("Last Name " + i);
-        person.setAddress("Some address - Brasil " + i);
-
-        return person;
+        return personRepository.findAll();
     }
 
     public Person createPerson(Person person) {
@@ -58,7 +37,7 @@ public class PersonService {
                 "Creating a new person with name %s",
                 person.getFirstName()));
 
-        return person;
+        return personRepository.save(person);
     }
 
     public Person updatePerson(Person person) {
@@ -66,12 +45,24 @@ public class PersonService {
                 "Updating person with id %s",
                 person.getId()));
 
-        return person;
+        Person newPerson = personRepository.findById(person.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("Person not found"));
+
+        newPerson.setFirstName(person.getFirstName());
+        newPerson.setLastName(person.getLastName());
+        newPerson.setAddress(person.getAddress());
+
+        return personRepository.save(newPerson);
     }
 
-    public void deletePerson(String id) {
+    public void deletePerson(Long id) {
         logger.info(String.format(
                 "Deleting person with id %s",
                 id));
+
+        Person newPerson = personRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Person not found"));
+
+        personRepository.delete(newPerson);
     }
 }
