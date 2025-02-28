@@ -26,10 +26,20 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @Transactional
+    public Person createPerson(@RequestBody Person person) {
+        return personService.createPerson(person);
+    }
+
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @Transactional(readOnly = true)
-    public Person getById(@PathVariable Long id) {
-        return personService.findById(id);
+    public ResponseEntity<Person> findById(@PathVariable(value = "id") Long id) {
+        try {
+            return ResponseEntity.ok(personService.findById(id));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -44,21 +54,19 @@ public class PersonController {
         return personService.findByName(firstName);
     }
 
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    @Transactional
-    public Person createPerson(@RequestBody Person person) {
-        return personService.createPerson(person);
-    }
-
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @Transactional
-    public Person updatePerson(@RequestBody Person person) {
-        return personService.updatePerson(person);
+    public ResponseEntity<Person> update(@RequestBody Person person) {
+        try {
+            return ResponseEntity.ok(personService.updatePerson(person));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping(value = "/{id}")
     @Transactional
-    public ResponseEntity<?> deletePerson(@PathVariable Long id) {
+    public ResponseEntity<?> deletePerson(@PathVariable(value = "id") Long id) {
         personService.deletePerson(id);
         return ResponseEntity.noContent().build();
     }
