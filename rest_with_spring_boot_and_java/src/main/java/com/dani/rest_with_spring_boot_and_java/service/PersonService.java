@@ -41,11 +41,20 @@ public class PersonService {
         return personRepository.findByFirstName(firstName);
     }
 
+    private Optional<Person> findByFirstNameAndLastName(String firstName, String lastName) {
+        return personRepository.findByFirstNameAndLastNameJPQL(firstName, lastName);
+    }
+
     public Person createPerson(Person person) {
 
         logger.info(String.format(
                 "Creating a new person with name %s",
                 person.getFirstName()));
+
+        Optional<Person> personOptional = findByFirstNameAndLastName(person.getFirstName(), person.getLastName());
+        if (personOptional.isPresent()) {
+            throw new ResourceNotFoundException("Person already exists");
+        }
 
         return personRepository.save(person);
     }

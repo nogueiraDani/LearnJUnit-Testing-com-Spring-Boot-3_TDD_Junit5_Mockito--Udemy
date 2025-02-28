@@ -12,7 +12,7 @@ import com.dani.tdd.model.Person;
 import com.dani.tdd.service.IPersonService;
 import com.dani.tdd.service.PersonService;
 
-public class PersonServiceTest {
+public class TDDPersonServiceTest {
 
     IPersonService personService;
     Person person;
