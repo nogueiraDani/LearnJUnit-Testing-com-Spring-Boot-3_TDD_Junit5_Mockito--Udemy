@@ -33,8 +33,14 @@ Repositório dos meus estudos do curso **"Testes Unitários e de Integração pa
 │   │   │   │   ├── 📁 mockito_first_steps  # Primeiros passos com Mockito
 │   │   │   │   └── 📁 mockito_advanced_concepts # Conceitos avançados com Mockito
 │   │   │   │   ├── 📁 tdd  # Exercícios de Desenvolvimento Orientado a Testes
-│   │   │   │   ├── 📁 test_containers  # Configuração de contêineres para testes
-│   │   │   │   ├── 📁 test_integration  # Testes de integração com Spring Boot
+📂 rest_with_spring_boot_and_java
+├── 📁 src
+│   ├── 📁 test
+│   │   ├── 📁 java
+│   │   │   ├── 📁 com.dani.lessons
+│   │   │   │   ├── 📁 controller # teste da camada de controller
+│   │   │   │   ├── 📁 repositories # teste da camada de repositorios
+│   │   │   │   ├── 📁 service # teste da camada de service
 ├── 📄 README.md  # Documentação do repositório
 └── ...
 ```
