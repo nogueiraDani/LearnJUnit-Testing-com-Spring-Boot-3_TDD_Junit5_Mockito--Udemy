@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.repositories;
+package com.dani.lessons.repositories;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import com.dani.rest_with_spring_boot_and_java.entity.Person;
+import com.dani.lessons.entity.Person;
 
 @DataJpaTest
 public class PersonRepositoryTest {

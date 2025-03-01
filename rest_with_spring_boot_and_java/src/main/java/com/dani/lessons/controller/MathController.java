@@ -1,12 +1,12 @@
-package com.dani.rest_with_spring_boot_and_java.controller;
+package com.dani.lessons.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dani.rest_with_spring_boot_and_java.service.MathService;
-import com.dani.rest_with_spring_boot_and_java.service.converters.NumberConverter;
+import com.dani.lessons.service.MathService;
+import com.dani.lessons.service.converters.NumberConverter;
 
 @RestController
 public class MathController {

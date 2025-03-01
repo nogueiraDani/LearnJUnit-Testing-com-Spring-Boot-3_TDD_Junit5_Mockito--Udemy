@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.exceptions;
+package com.dani.lessons.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

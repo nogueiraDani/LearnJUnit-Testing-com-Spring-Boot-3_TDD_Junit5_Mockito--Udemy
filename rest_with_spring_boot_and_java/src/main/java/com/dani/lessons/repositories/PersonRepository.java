@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.repositories;
+package com.dani.lessons.repositories;
 
 import java.util.Optional;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.dani.rest_with_spring_boot_and_java.entity.Person;
+import com.dani.lessons.entity.Person;
 
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long> {

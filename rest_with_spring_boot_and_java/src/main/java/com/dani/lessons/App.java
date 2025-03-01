@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java;
+package com.dani.lessons;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.entity;
+package com.dani.lessons.entity;
 
 import lombok.Getter;
 import lombok.Setter;

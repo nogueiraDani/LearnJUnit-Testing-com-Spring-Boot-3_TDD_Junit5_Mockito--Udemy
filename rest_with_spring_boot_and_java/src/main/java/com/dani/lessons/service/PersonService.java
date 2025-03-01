@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.service;
+package com.dani.lessons.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,9 +7,9 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dani.rest_with_spring_boot_and_java.entity.Person;
-import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
-import com.dani.rest_with_spring_boot_and_java.repositories.PersonRepository;
+import com.dani.lessons.entity.Person;
+import com.dani.lessons.exceptions.ResourceNotFoundException;
+import com.dani.lessons.repositories.PersonRepository;
 
 @Service
 public class PersonService {

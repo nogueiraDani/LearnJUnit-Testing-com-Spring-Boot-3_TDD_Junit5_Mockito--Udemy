@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.controller;
+package com.dani.lessons.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dani.rest_with_spring_boot_and_java.entity.Person;
-import com.dani.rest_with_spring_boot_and_java.service.PersonService;
+import com.dani.lessons.entity.Person;
+import com.dani.lessons.service.PersonService;
 
 @RestController
 @RequestMapping("/person")

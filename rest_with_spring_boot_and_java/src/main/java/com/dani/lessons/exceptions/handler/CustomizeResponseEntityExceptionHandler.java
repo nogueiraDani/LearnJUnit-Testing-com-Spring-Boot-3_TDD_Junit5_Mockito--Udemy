@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.exceptions.handler;
+package com.dani.lessons.exceptions.handler;
 
 import java.util.Date;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.dani.rest_with_spring_boot_and_java.exceptions.ExceptionResponse;
-import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
+import com.dani.lessons.exceptions.ExceptionResponse;
+import com.dani.lessons.exceptions.ResourceNotFoundException;
 
 @RestController
 @ControllerAdvice // organiza as excecoes de todas as controllers, caso elas nao seja tratadas

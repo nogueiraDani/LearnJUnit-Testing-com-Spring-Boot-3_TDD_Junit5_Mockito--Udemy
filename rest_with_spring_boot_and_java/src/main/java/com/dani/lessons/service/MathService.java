@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.service;
+package com.dani.lessons.service;
 
 import org.springframework.stereotype.Service;
 

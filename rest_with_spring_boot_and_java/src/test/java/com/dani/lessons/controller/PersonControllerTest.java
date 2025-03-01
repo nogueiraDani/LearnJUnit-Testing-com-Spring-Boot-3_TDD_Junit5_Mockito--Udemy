@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.controller;
+package com.dani.lessons.controller;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.ArgumentMatchers.any;
@@ -24,9 +24,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
-import com.dani.rest_with_spring_boot_and_java.entity.Person;
-import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
-import com.dani.rest_with_spring_boot_and_java.service.PersonService;
+import com.dani.lessons.entity.Person;
+import com.dani.lessons.exceptions.ResourceNotFoundException;
+import com.dani.lessons.service.PersonService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

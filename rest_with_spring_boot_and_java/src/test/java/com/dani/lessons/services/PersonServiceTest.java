@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.services;
+package com.dani.lessons.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -25,10 +25,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.dani.rest_with_spring_boot_and_java.entity.Person;
-import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
-import com.dani.rest_with_spring_boot_and_java.repositories.PersonRepository;
-import com.dani.rest_with_spring_boot_and_java.service.PersonService;
+import com.dani.lessons.entity.Person;
+import com.dani.lessons.exceptions.ResourceNotFoundException;
+import com.dani.lessons.repositories.PersonRepository;
+import com.dani.lessons.service.PersonService;
 
 @ExtendWith(MockitoExtension.class)
 public class PersonServiceTest {

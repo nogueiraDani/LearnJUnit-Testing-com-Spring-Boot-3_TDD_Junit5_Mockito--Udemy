@@ -1,4 +1,4 @@
-package com.dani.rest_with_spring_boot_and_java.service.validations;
+package com.dani.lessons.service.validations;
 
 public class NumberValidation {
 

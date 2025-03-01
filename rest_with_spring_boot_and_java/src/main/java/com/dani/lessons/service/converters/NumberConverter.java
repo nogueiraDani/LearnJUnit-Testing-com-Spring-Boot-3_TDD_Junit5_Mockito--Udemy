@@ -1,9 +1,9 @@
-package com.dani.rest_with_spring_boot_and_java.service.converters;
+package com.dani.lessons.service.converters;
 
 import org.springframework.stereotype.Service;
 
-import com.dani.rest_with_spring_boot_and_java.exceptions.ResourceNotFoundException;
-import com.dani.rest_with_spring_boot_and_java.service.validations.NumberValidation;
+import com.dani.lessons.exceptions.ResourceNotFoundException;
+import com.dani.lessons.service.validations.NumberValidation;
 
 @Service
 public class NumberConverter {
